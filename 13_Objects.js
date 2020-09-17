@@ -117,14 +117,84 @@ var myMusic = [
     }
 ];
 
+// Accessing Nested Objects 
+var myStorage = {
+    "car": {
+        "inside":{
+            "glove box": "maps",
+            "passenger seat": "crumbs"
+        },
+        "outside": {
+            "truck": "jack"
+        }
+    }
+};
 
+var gloveBoxContents = myStorage.car.inside["glove box"];
+console.log(gloveBoxContents)
 
+// Accessing Nested Arrays 
+var myPlants = [
+    {
+        type: "flowers",
+        list: [
+            "rose",
+            "tulip",
+            "dandelion"
+        ]
+    },
+    {
+        type: "trees",
+        list: [
+            "fir",
+            "pipes",
+            "birch"
+        ]
+    }
+];
+var secoundTree = myPlants[1].list[1]
+// console.log(secoundTree);
 
+// Record Collection 
+var collection = {
+    "2548": {
+        "album": "slippery When Wet",
+        "artist": "Bon Jovi",
+        "tracks": [
+            "Let it Rock",
+            "You Give Love a Bad Name"
+        ]
+    },
+    "2468": {
+        "album": "1999",
+        "artist": "Prince",
+        "tracks": [
+            "1999",
+            "Little Red Corvette"
+        ]
+    },
+    "1245": {
+        "artist": "Robert Palmer",
+        "tracks": []
+    },
+    "5439": {
+        "album": "ABBA Gold"
+    }
+}; 
 
+var collectionCopy = JSON.parse(JSON.stringify(collection));
 
-
-
-
-
-
+function updateRecords(id, prop, value){
+    if (value === ""){
+        delete collection[id][prop];
+    }else if (prop == "tracks"){
+        collection[id][prop] = collection[id][prop] || [];
+        collection[id][prop].push(value);
+    }else {
+        collection[id][prop] = value;
+    }
+    return collection;
+}
+console.log(updateRecords(2468, "tracks","test"));
+// console.log(updateRecords(5439,"artist","ABBA"));
 
