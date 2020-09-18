@@ -76,5 +76,94 @@ do{
     myArray.push(i);
     i++;
 }while (i < 5)
-
 console.log(i, myArray);
+
+// Profile Lookup 
+var contacts =[
+{
+    "firstName": "Akira",
+    "lastName": "laine",
+    "number": "1234567890",
+    "likes": ["Pizza", "burger", "Cake"]
+},
+{
+    "firstName": "Deepak",
+    "lastName": "Sharma",
+    "number": "7473423847",
+    "likes": ["Momoss", "chowmin", "Burger"]
+},
+{
+    "firstName": "Mohit",
+    "lastName": "Kantiwal",
+    "number": "4767637462372",
+    "likes": ["yogurt", "Coldrink"]
+},
+{
+    "firstName": "Randeep",
+    "lastName": "Jangra",
+    "number": "5446756855",
+    "likes": ["Hacking", "python"]
+},
+];
+
+function lookUpProfile(name, prop){
+    for (var i = 0; i < contacts.length; i++){
+        if (contacts[i].firstName === name) {
+            return contacts[i][prop] || "No Such Property";
+        }
+    }
+    return "No Such Contact"
+}
+
+var data = lookUpProfile("Akira", "likes");
+
+console.log(data);
+
+// Generate Random Fractions 
+function randomFraction(){
+    return Math.random();
+}
+console.log(randomFraction());
+
+// Genrate Random Whole Numbers 
+var randomNumberBetween0and19 = Math.floor(Math.random() * 20);
+console.log(randomNumberBetween0and19);
+
+function randomWholeNum(){
+   
+    return Math.floor(Math.random() * 10);
+}
+console.log(randomWholeNum());
+
+// Generate Random Whole Numbers Within a Range 
+function ourRandomRange(ourMin, ourMax) {
+    return Math.floor(Math.random() * (ourMax - ourMin + 1)) + ourMin;
+}
+console.log(ourRandomRange(12, 45))
+
+// Ude the parseInt Function
+function convertToInteger(str){
+     return parseInt(str);
+
+}
+console.log(convertToInteger("56"));
+
+// Use the parseInt Function with a Radix 
+function convertToInteger(str){
+    return parseInt(str, 2)
+}
+console.log(convertToInteger("10011"));
+
+// Use the Conditional (Ternary) Operator 
+// Condition ? Statement-if-True : Statement-If-false;
+function checkEqual(a,b){
+    return a === b ? true : false;
+}
+console.log(checkEqual(1, 2));
+
+
+// Use Multiple Condition (Ternary Operators)
+function checkSign(num){
+   return num > 0 ? "Positive" : num < 0 ? "Negative" : "zero";
+}
+console.log(checkSign(10));
