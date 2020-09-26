@@ -1,0 +1,53 @@
+`
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>projects</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="projects">
+        <h1>Java Script Projects </h1>
+        <div class="container-1">
+            <h2>Project 1: Your Age in Days</h2>
+            <div class="flex-box-container-1">
+                <div>
+                    <button class="btn btn-primary" onclick="ageInDays()">Click Me</button>
+                </div>
+                <div>
+                    <button class="btn btn-danger" onclick="reset()">Reset</button>
+                </div>
+            </div>
+            <div>
+                <div class="flex-box-container-1">
+                    <div id="flex-box-result"></div>
+                </div>
+            </div>
+        </div>
+        <!- - Challenge 2 -->
+            <div class="conatiner-2">
+                <h2>Project 2: Image generator</h2>
+                <button class="btn btn-success" id="cat-generator" onclick="generateCat()">Generate Cat</button>
+                <div class="flex-box-container-2" id="flex-cat-gen"></div>
+            </div>
+            <div class="container-3">
+                <h2>Project 3: Rock, Paper & Scissors game</h2>
+                <div class="flex-box-rps" id="flex-box-rps-div">
+                    <img id="rock" src="Images/Stone.jpg" height="150" width="150" alt="Stone Image"
+                        onclick="rpsGame(this)">
+                    <img id="paper" src="Images/paper.jpg" height="150" width="150" alt="Stone Image"
+                        onclick="rpsGame(this)">
+                    <img id="scissors" src="Images/scissors.png" height="150" width="150" alt="Stone Image"
+                        onclick="rpsGame(this)">
+                </div>
+            </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
