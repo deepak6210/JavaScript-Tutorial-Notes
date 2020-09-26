@@ -1,0 +1,16 @@
+h1::after{
+    content: "Hi I'm Deepak";
+    animation: textanim 10s linear infinite;
+  }
+  
+  @keyframes textanim{
+    25%{
+      content: "I'm a Developer";
+    }
+    50%{
+      content: "I'm a Engineer";
+    }
+    75%{
+      content: "I'm a Blogger";
+    }
+  }

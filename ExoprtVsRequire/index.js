@@ -10,3 +10,5 @@ export { capitalizeString };
 
 export const foo = "bar";
 export const bar = "foo";
+
+// Use * to Import Everthing from a file 
