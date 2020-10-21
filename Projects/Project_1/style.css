@@ -1,13 +1,15 @@
 *{
-    background-color: royalblue;
+    background-color: rgb(216, 47, 160);
     font-family: sans-serif;
 }
 .projects h1{
     display: flex;
     justify-content: center;
+    color: white;
 }
 .container-1{
     border: 1px solid black;
+    color: blanchedalmond;
     margin: 12vh auto;
     width: 75%;
     text-align: center;
@@ -28,6 +30,7 @@
 
 /* Challenge 2 */
 .conatiner-2{
+    color: blanchedalmond;
     border: 1px solid black;
     width: 75%;
     margin: 0 auto;
@@ -42,13 +45,14 @@
 }
 .flex-box-container-2 img {
  border: 1px solid green;
- /* padding: 10px; */
+ padding: 10px;
  margin: .5em;
  box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.7);
 }
 
 /* Challenge 3 */
 .container-3{
+    color: blanchedalmond;
     border: 1px solid black;
     margin: 12vh auto;
     width: 75%;
@@ -61,7 +65,31 @@
     flex-wrap: wrap;
     justify-content: space-around;
 }
+.flex-box-rps img{
+    margin: 1em;
+}
 .flex-box-rps img:hover{
     box-shadow: 0px 10px 50px rgba(37, 50, 233, 1);
+}
+/* Challenge 4  */
+.flex-box-pick-color{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border: 1px solid black;
+    padding: 15px 15px;
+}
+.container-4{
+    color: blanchedalmond;
+    border: 1px solid black;
+    margin: 12vh auto;
+    width: 75%;
+    text-align: center;
+}
+#background {
+    background-color: white;
+}
+option{
+    background-color: white;
 }
 
